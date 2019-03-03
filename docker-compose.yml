@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  api:
+    build: .
+    volumes:
+      - .:/app
+    command: puma
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgres://postgres@db
+    tty: true
+    stdin_open: true
+  db:
+    image: postgres:11.2-alpine
