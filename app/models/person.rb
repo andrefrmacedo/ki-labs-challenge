@@ -6,7 +6,7 @@ class Person < ApplicationRecord
   has_many :person_slots
   has_many :slots, through: :person_slots
 
-  enumerize :role, in: [:inverviewer, :candidate], scope: :role
+  enumerize :role, in: [:interviewer, :candidate], scope: :role
 
   validates :role, presence: true
 end
