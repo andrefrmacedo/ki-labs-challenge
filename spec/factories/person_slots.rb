@@ -2,8 +2,6 @@
 
 FactoryBot.define do
   factory :person_slot do
-    person { nil }
-    slot { nil }
-    open { false }
+    open { true }
   end
 end
