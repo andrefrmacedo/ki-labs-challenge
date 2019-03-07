@@ -6,8 +6,10 @@
 ## Run the project
 To run the project, first we need to build the docker image by running:
 - `docker-compose build`
+
 After that we need to setup the database with:
 - `docker-compose run api rails db:setup`
+
 This will set the database up and populate it with seeds.
 To finally run this project, please enter the following command:
 - `docker-compose-up`
